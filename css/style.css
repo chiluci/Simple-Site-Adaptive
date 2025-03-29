@@ -82,10 +82,9 @@ a {
     padding: 0;
     white-space: nowrap;
     clip-path: inset(100%);
+    clip: rect(0 0 0 0);
     overflow: hidden;
-    visibility: hidden;
-}
-
+  }
 /* Header section */
 .site-header {
     background-color: var(--color-gray-light);
@@ -95,21 +94,22 @@ a {
 
 /* Navbar */
 .site-nav {
-    margin-bottom: 141px;
+    margin-bottom: 136px;
 }
 
 .site-nav__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 27px;
+    gap: var(--gap-lg);
     margin-left: -0.75em;
 }
 
 .site-nav__link {
     display: block;
-    padding: 0.5em 0.75em;
     text-transform: uppercase;
-    letter-spacing: var(--letter-spacing);
+    color: var(--color-black);
+    padding: 0.5em 3px 0.5em 0;
+    letter-spacing: var(--letter-spacing)
 }
 
 .site-nav__link--active {
@@ -117,7 +117,7 @@ a {
     color: var(--color-primary);
 }
 
-/* Hero Section */
+/* Intro Section */
 .intro {
     display: flex;
     flex-direction: column;
@@ -149,17 +149,23 @@ a {
 
 /* Section Common Styles */
 .section {
-    padding-top: 110px;
+    padding-top: 112px;
     padding-bottom: 90px;
     text-align: center;
 }
 
 .section__title {
-    margin-bottom: 35px;
+    color: var(--color-black);
+   text-align: center;
+   font-size: 2rem;
+   font-weight: 500;
+   margin-bottom: 39px;
 }
 
 .section__description {
     color: var(--color-secondary);
+    line-height: var(--line-height-lg);
+    text-align: center;
 }
 
 /* Specific Sections */
@@ -176,7 +182,7 @@ a {
     background-color: var(--color-primary);
     color: var(--color-white);
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 92px;
 }
 
 .stats__list {
@@ -200,6 +206,7 @@ a {
 .stats__number {
     font-size: 1.3125rem;
     font-weight: 500;
+    line-height: 1.4;
 }
 .stats__item {
     display: flex;
